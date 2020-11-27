@@ -1,7 +1,9 @@
 # oligoPaint
-generates semi-random colors to make a chromosome barcode
+Generates semi-random colors to make a chromosome barcode.
 
 This is used in a karyotyping experiment where chromosomes defects could be spotted using spatial information from the color coding. Each color blocks will be associated with fluorescent conjugated oligo probes, and detect by FISH microscopy. oligoPaint will avoid pattern repetitions (ex: 1,2,1,2), simple repetitions (ex: 1,1,1), symetries (ex: 1,2,3,2,1) and it will maximize Levenshtein/Editor distance between chromosomes.
+
+<img src="https://github.com/alexandrebastien/oligoPaint/blob/main/example/stripes.jpg" width="200">
 
 ## Usage
 `ct = oligoPaint(csvConf,csvOut)`
