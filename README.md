@@ -2,9 +2,9 @@
 This is the repository for all software and scripts described in (publication in progress). This publication describes a new technique to simplify and automatize karyotyping based on oligo-banding, a semi-random color barcode for chromosomes.
 
 ## randomBanding
-This is a Matlab(R) function that generates semi-random colors to make a chromosome barcode. This is used in a karyotyping experiment where chromosomes defects could be spotted using spatial information from the color coding. Each color blocks will be associated with fluorescent conjugated oligo probes and detected by FISH microscopy. randomBanding will avoid pattern repetitions (ex: 1,2,1,2), simple repetitions (ex: 1,1,1), symmetries (ex: 1,2,3,2,1) and it will maximize Levenshtein/Editor distance between chromosomes.
+This is a [Matlab](https://www.mathworks.com/products/matlab.html) function that generates semi-random colors to make a chromosome barcode. This is used in a karyotyping experiment where chromosomes defects could be spotted using spatial information from the color coding. Each color blocks will be associated with fluorescent conjugated oligo probes and detected by FISH microscopy. randomBanding will avoid pattern repetitions (ex: 1,2,1,2), simple repetitions (ex: 1,1,1), symmetries (ex: 1,2,3,2,1) and it will maximize Levenshtein/Editor distance between chromosomes.
 
-<img src="https://github.com/alexandrebastien/oligoPaint/blob/main/example/stripes.jpg" width="200">
+<img src="https://github.com/alexandrebastien/Oligo-Banding/blob/main/example/stripes.jpg" width="200">
 
 ## Usage
 `ct = randomBanding(csvConf,csvOut)`
