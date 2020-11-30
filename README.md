@@ -6,13 +6,13 @@ This is a [Matlab](https://www.mathworks.com/products/matlab.html) function that
 
 <img src="https://github.com/alexandrebastien/Oligo-Banding/blob/main/example/stripes.jpg" width="200">
 
-## Usage
+### Usage
 `ct = randomBanding(csvConf,csvOut)`
 - read conf file (example/config.csv)
 - generate a color table (example/stripes.csv)
 - generate an image of the colored stripes (example/stripes.jpg)
 
-## Parameters in config.csv
+### Parameters in config.csv
 - Chromosome: chromosome names
 - Stripes: number of desired stripes for the chromosome
 - Colors (first row only): number of different colors needed
