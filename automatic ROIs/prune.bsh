@@ -1,0 +1,53 @@
+// @ImagePlus(label="Skeleton image", description="Binary image skeletonized with Skeletonize3D") image
+// @double(label="Length threshold", description="Minimum branch length to keep") threshold
+// @OUTPUT ImagePlus prunedImage
+
+import sc.fiji.analyzeSkeleton.AnalyzeSkeleton_;
+import sc.fiji.analyzeSkeleton.Edge;
+import sc.fiji.analyzeSkeleton.Point;
+import ij.IJ;
+
+// analyze skeleton
+skel = new AnalyzeSkeleton_();
+skel.setup("", image);
+skelResult = skel.run(AnalyzeSkeleton_.NONE, false, false, null, true, false);
+
+// create copy of input image
+prunedImage = image.duplicate();
+outStack = prunedImage.getStack();
+
+// get graphs (one per skeleton in the image)
+graph = skelResult.getGraph();
+
+// list of end-points
+endPoints = skelResult.getListOfEndPoints();
+
+for( i = 0 ; i < graph.length; i++ )
+{
+	listEdges = graph[i].getEdges();
+
+	// go through all branches and remove branches under threshold
+	// in duplicate image
+	for( Edge e : listEdges )
+	{
+		p = e.getV1().getPoints();
+		v1End = endPoints.contains( p.get(0) );
+		p2 = e.getV2().getPoints();
+		v2End = endPoints.contains( p2.get(0) );
+		// if any of the vertices is end-point 
+		if( v1End || v2End )
+		{
+			if( e.getLength() < threshold )
+			{
+				if( v1End )
+					outStack.setVoxel( p.get(0).x, p.get(0).y, p.get(0).z, 0 );
+				if( v2End )
+					outStack.setVoxel( p2.get(0).x, p2.get(0).y, p2.get(0).z, 0 );
+				for( Point p : e.getSlabs() )
+					outStack.setVoxel( p.x, p.y, p.z, 0 );
+			}
+		}
+	}
+}
+
+prunedImage.setTitle( image.getShortTitle() + "-pruned" );
