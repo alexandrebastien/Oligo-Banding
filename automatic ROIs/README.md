@@ -1,22 +1,16 @@
-# Caryotypage automatique basé sur l'Oligo-Banding
+# Automatic ROIs selections for Oligo-Banding karyotyping
 
-* Document de travail
+## Word in progress
 
+- Skeleton pruned and cleaned
 
-- Skeleton pruned
-- Skeleton nettoyé dans matlab
-- Pour la suite:
-    - Faire pivoter le blob sur chaque point du skeleton pour joindre les points
-    - Allonger les lignes centrales comme dans Ferraz
-    - Fit des ROI ligne sur le skeleton
+## TO DO
+- Pivote mask or skeleton on each skeleton point to find the best path
+- Ellongate the central lines
+- Fit lines ROIs on the remaining skeleton points
 
-
-
-
-
-Référence:
-
-Automatic karyotyping based on computational vision and intelligent classifiers
-Pedro F. R. Ferraz
-Instituto Superior Técnico
-Lisboa,Portugal,2010 ( e-mail: FerrazPedro@live.com.pt).
+## Référence
+> Automatic karyotyping based on computational vision and intelligent classifiers
+> Pedro F. R. Ferraz
+> Instituto Superior Técnico
+> Lisboa,Portugal,2010 ( e-mail: FerrazPedro@live.com.pt).
