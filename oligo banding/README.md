@@ -41,3 +41,10 @@ With this, one can save and load all the windows positions to quickly create an 
 
 ### Quit (x)
 This close the Oligo-Banding Action Bar.
+
+## TO DO
+
+* Check if DAPI threshold follows config option
+* Check if cutoff behave properly
+* Check if plot is scaled properly
+
