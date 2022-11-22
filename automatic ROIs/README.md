@@ -10,7 +10,5 @@
 - Fit lines ROIs on the remaining skeleton points
 
 ## Référence
-> Automatic karyotyping based on computational vision and intelligent classifiers
-> Pedro F. R. Ferraz
-> Instituto Superior Técnico
-> Lisboa,Portugal,2010 ( e-mail: FerrazPedro@live.com.pt).
+> Automatic karyotyping based on computational vision and intelligent classifiers by [Pedro F. R. Ferraz](mailto:FerrazPedro@live.com.pt)
+> Instituto Superior Técnico, Lisboa, Portugal, 2010
