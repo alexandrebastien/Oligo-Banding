@@ -114,10 +114,10 @@ function config() {
 	// Loading prefs (all config is saved into ij.Prefs)
 	colors = call("ij.Prefs.get", "UL.OligoBanding.colors", "RYCOWG");
 	chromosomes = call("ij.Prefs.get", "UL.OligoBanding.chromosomes", chromosomes);
-	xtol = call("ij.Prefs.get", "UL.OligoBanding.xtol", 0.25);
-	ytol = call("ij.Prefs.get", "UL.OligoBanding.ytol", 350);
+	xtol = call("ij.Prefs.get", "UL.OligoBanding.xtol", 0.3);
+	ytol = call("ij.Prefs.get", "UL.OligoBanding.ytol", 9.0);
 	dapiMask = call("ij.Prefs.get", "UL.OligoBanding.dapiMask", true);
-	cutoff = call("ij.Prefs.get", "UL.OligoBanding.cutoff", 0.3);
+	cutoff = call("ij.Prefs.get", "UL.OligoBanding.cutoff", 0.0);
 	
 	// Check if tool icon is in start menu
 	str = getStartMenuSTR();
