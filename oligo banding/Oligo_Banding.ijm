@@ -1,4 +1,4 @@
-run("Action Bar","/plugins/Oligo_Banding.ijm");
+run("Action Bar","/plugins/ULaval/Oligo_Banding.ijm");
 exit();
 
 <stickToImageJ>
@@ -107,7 +107,7 @@ function config() {
  
 	// Chromosomes defaults
 	// This is designed from the porcine oligo probes used in the lab
-	chromosomes = "GYWROWRGCWO,CORGOC,CRWCY,YRWYC,WGCYC,"+
+	chromosomes = "GYWROWRGCWO,CORGOC,CRWCY,YRWYC,WGCO,"+
 				  "YROCRW,YCOYW,RYWGY,OWGYR,CWR,YRG,GOR,"+
 				  "GYWCYGWCOCR,CGWYR,WYRWC,WYG,OCY,CWY,OYCG,CR";
 
